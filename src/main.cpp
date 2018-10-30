@@ -37,7 +37,7 @@ uchar4 hex_to_uchar4_color(string& color) {
 
 int main(int argc, char **argv) {
 
-	string input_file = "original_20.jpg";
+	string input_file = "original_10.jpg";
 	string output_file = "d_gauss.jpg";
 	uchar4 *d_in = load_image_in_GPU(input_file);
 	uchar4 *h_out = NULL;
@@ -53,7 +53,7 @@ int main(int argc, char **argv) {
 		saveImageRGBA(h_out, output_file, numRows, numCols);
 
 	string str = "convert "; 
-    str = str + "original_20.jpg " + "original_20.pgm";
+    str = str + "original_10.jpg " + "original_10.pgm";
 
     const char *command = str.c_str();
     system(command);
@@ -64,10 +64,10 @@ int main(int argc, char **argv) {
     command = str.c_str();
     system(command);
 
-    char *t1 = "original_20.pgm";
+    char *t1 = "original_10.pgm";
     char *t2 = "d_gauss.pgm";
-    char *t3 = "h_original_20_edge.pgm";
-    char *t4 = "d_original_20_edge.pgm";
+    char *t3 = "h_original_10_edge.pgm";
+    char *t4 = "d_original_10_edge.pgm";
     char *t5 = "h_gauss_edge.pgm";
     char *t6 = "d_gauss_edge.pgm";
 
