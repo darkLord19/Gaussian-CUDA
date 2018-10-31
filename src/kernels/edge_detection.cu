@@ -149,8 +149,5 @@ void edgeDetection(char *argv, char *h_res, char *d_res) {
 
 	/* ************************ END Device processing
 	************************* */
-
-	printf("Press enter to exit ...\n");
-	getchar();
 }
 
