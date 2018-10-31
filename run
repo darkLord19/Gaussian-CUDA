@@ -18,7 +18,8 @@ do
 		./blur >> out
 		prev_d="d_gauss_$x"
 		git add .
-		git commit -m "$i_$x"
+		msg=
+		git commit -m "amount_$x"
 	done
 
 	prev=$x
