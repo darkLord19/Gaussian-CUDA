@@ -19,9 +19,9 @@ do
 		./blur >> ../out
 		git add --all
 		git commit -m "$x"
-		prev_d="gauss_$x"
 	done
 
+	prev_d="gauss_$x"
 	prev=$x
 
 done
