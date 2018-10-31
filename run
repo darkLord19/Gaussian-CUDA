@@ -17,9 +17,9 @@ do
 		sed "s/${amount_o}/${amount_n}/g" src/main.cpp -i
 		make
 		./blur >> out
-		prev_d="d_gauss_$x"
 		git add --all
 		git commit -m "$x"
+		prev_d="d_gauss_$x"
 	done
 
 	prev=$x
