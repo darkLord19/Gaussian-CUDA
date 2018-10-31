@@ -2,7 +2,7 @@
 
 mkdir obj
 prev=20
-prev_d=d_gauss
+prev_d=gauss
 
 for x in 10 30 40 50
 do
@@ -11,7 +11,7 @@ do
 		echo "size=$i and amount=$x\n" >> ../out
 		amount_o="amount = $prev"
 		amount_n="amount = $x"
-		gauss_n="d_gauss_$x"
+		gauss_n="gauss_$x"
 		git checkout test-$i
 		sed "s/${prev_d}/${gauss_n}/g" src/main.cpp -i
 		sed "s/${amount_o}/${amount_n}/g" src/main.cpp -i
@@ -19,7 +19,7 @@ do
 		./blur >> ../out
 		git add --all
 		git commit -m "$x"
-		prev_d="d_gauss_$x"
+		prev_d="gauss_$x"
 	done
 
 	prev=$x
