@@ -19,6 +19,8 @@ do
 		./blur >> out
 		git add --all
 		git commit -m "$x"
+		git add .
+		git commit -m "Fuck"
 		prev_d="d_gauss_$x"
 	done
 
